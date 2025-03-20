@@ -1,0 +1,17 @@
+/* src/Header.css */
+header {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
