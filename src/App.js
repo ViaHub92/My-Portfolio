@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Element } from 'react-scroll';
+import { Element } from 'react-scroll';
 import Landing from './components/Landing';
 import AboutMe from './components/AboutMe';
 import './App.css'; // Global styles if needed
