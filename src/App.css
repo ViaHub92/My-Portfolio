@@ -1,43 +1,200 @@
-html {
-  scroll-behavior: smooth;
+body {
+  background: linear-gradient(45deg, #5ccfe6, #bae67e);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  font-family: Arial, sans-serif;
+  color: white;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: flex-start; /* Align content to the left */
 }
 
-.App {
+.oswald-custom {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Text Container */
+.text-container {
+  font-family: "Oswald", sans-serif;
+  text-align: left;
+  padding: 20px;
+  max-width: 500px; /* Make the container smaller */
+  margin-left: 300px; /* Move the container slightly to the right */
+  margin-top: 25px; /* Push the container down a bit */
+}
+
+/* Main Title */
+.title {
+  font-size: 3rem; /* Reduced font size */
+  background: linear-gradient(45deg, #2f3b54, #6679a4);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: left;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.5rem; /* Reduced font size */
+  color: #2f3b54;
+  margin-bottom: 20px;
+  font-weight: 400;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* About Me Section */
+.about-me {
+  font-size: 1 rem; /* Reduced font size */
+  color: #2f3b54;
+  border-radius: 8px;
+  max-width: 500px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Programming Skills Title */
+.skills-title {
+  color: #2f3b54;
+  font-size: 1.5rem;
+  margin-top: 75px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.skills-logos {
+  display: flex;
+  gap: 20px; /* Space between the images */
+  justify-content: center; /* Center the images */
+  flex-wrap: wrap; /* Allow logos to wrap to the next line if necessary */
+}
+
+.skill-logo {
+  width: 50px; /* Adjust the size as needed */
+  height: auto; /* Maintain the aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Optional: Add smooth scaling on hover */
+}
+
+.skill-logo:hover {
+  transform: scale(1.1); /* Optional: Slightly scale up on hover */
+}
+
+/* Right Compartment (scrollable area) */
+.right-compartment {
+  position: fixed; /* Keep it fixed to the right */
+  font-family: "Oswald", sans-serif;
+  top: 30px; /* Position it below the top title */
+  right: 10px; /* Position it on the right edge */
+  width: 700px; /* Adjust width as needed */
+  height: 90vh; /* Make it almost as tall as the viewport */
+  color: #2f3b54; /* Text color */
+  padding: 20px; /* Inner padding */
+  border-radius: 8px; /* Optional: rounded corners */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  margin-right: 300px;
+  margin-top: 100px;
+}
+
+.right-compartment h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.right-compartment p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 40px 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.project-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row; /* Align image and text side by side */
+  align-items: center; /* Keep items aligned */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  gap: 20px; /* Space between image and text */
+  max-width: 700px; /* Limit width so text isn't too squished */
+}
+.project-card:hover {
+  transform: translateY(-10px); /* Optional: adds hover effect */
 }
 
-.App-link {
-  color: #61dafb;
+.project-image {
+  width: 150px; /* Adjust width */
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.project-description {
+  flex: 1; /* Allows text to take available space */
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
 }
 
+.project-link {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.right-compartment::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.right-compartment {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Internet Explorer and Edge */
+.right-compartment {
+  -ms-overflow-style: none;
+}
+
+/* Contact Me Section */
+.contact-me {
+  position: fixed;
+  bottom: 100px; /* Position it at the bottom */
+  left: 320px; /* Position it at the right */
+  display: flex;
+  gap: 25px; /* Space between icons */
+}
+
+.contact-me h1 {
+  font-family: "Oswald", sans-serif;
+  text-align: left;
+  font-size: 2rem; /* Adjust font size */
+  color: #2f3b54;
+  margin: 0; /* Remove extra spacing */
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.contact-icon {
+  width: 40px; /* Adjust icon size */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
