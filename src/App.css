@@ -111,7 +111,7 @@ body {
 /* Projects Section */
 .projects-section {
   padding: 40px 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .project-card {

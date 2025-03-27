@@ -28,13 +28,13 @@ const App = () => {
       {/* Right Compartment */}
       <div className="right-compartment">
         <h3>About Me</h3>
-        <p>I’m a recent graduate from Old Dominion University, where I earned my Bachelor’s degree in Computer Science on December 15, 2025. Now, I’m eager to kick-start my career as a Software Engineer, bringing a strong work ethic, adaptability, and problem-solving skills to the tech industry.</p>
-          <p>Before stepping into tech, I built a solid foundation in discipline and teamwork through a variety of jobs. I spent six years as a produce clerk at Kroger, two years as a cook at Serendipity, and a year handling inventory at Radial. Along the way, I also took on side projects in home improvement and landscaping, gaining hands-on experience in problem-solving and attention to detail.</p>
+        <p>I’m a recent graduate from Old Dominion University, where I earned my Bachelor’s degree in Computer Science on December 15, 2024. Now, I’m eager to kick-start my career as a Software Engineer, bringing a strong work ethic, adaptability, and problem-solving skills to the tech industry.</p>
+          <p>Before stepping into tech, I built a solid foundation in discipline and teamwork through a variety of jobs. I spent six years as a produce clerk at Kroger, two years as a cook at Serendipity, and a year handling inventory at Radial. Along the way, I also took on side projects in home improvement and landscaping. These jobs helped to get by, but my urge to start a career I will love has taken over.</p>
           <p>These diverse experiences have shaped me into a well-rounded, hardworking individual who’s ready to take on new challenges in software development. I’m excited to bring my passion for technology and my strong work ethic to a team where I can grow and contribute.</p>
-          <h2>Projects</h2>
 
 {/* Project 1 */}
 <div className="projects-section">
+  <h2>Projects</h2>
   <div className="project-card">
     <img src="Icons/Phisecure.png" alt="Phisecure" className="project-image" />
     <div className="project-description">
@@ -49,7 +49,29 @@ const App = () => {
   <div className="project-card">
     <img src="project2.png" alt="Project 2" className="project-image" />
     <div className="project-description">
-      <p>This is a description of my second project. It's a mobile app that helps with ABC.</p>
+      <p>This is a description placeholder for a project.</p>
+    </div>
+    <a href="https://github.com/dylan/project2" target="_blank" rel="noopener noreferrer" className="project-link">
+      View on GitHub
+    </a>
+  </div>
+
+  {/* Project 3 */}
+  <div className="project-card">
+    <img src="project3.png" alt="Project 3" className="project-image" />
+    <div className="project-description">
+      <p>This is a description placeholder for a project.</p>
+    </div>
+    <a href="https://github.com/dylan/project2" target="_blank" rel="noopener noreferrer" className="project-link">
+      View on GitHub
+    </a>
+  </div>
+
+  {/* Project 4 */}
+  <div className="project-card">
+    <img src="project4.png" alt="Project 4" className="project-image" />
+    <div className="project-description">
+      <p>This is a description placeholder for a project.</p>
     </div>
     <a href="https://github.com/dylan/project2" target="_blank" rel="noopener noreferrer" className="project-link">
       View on GitHub
