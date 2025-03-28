@@ -12,6 +12,14 @@ const App = () => {
             I’m a recent CS graduate eager to build and innovate!          
           </p>
         </div>
+        {/* Profile Picture */}
+        <div className="profile-picture-container">
+          <img 
+            src="CanvaDV.png" 
+            alt="Dylan Via" 
+            className="profile-picture" 
+          />
+        </div>
         {/* Skills Section */}
         <div className="skills">
           <h3 className="skills-title">Programming Skills</h3>
@@ -40,7 +48,7 @@ const App = () => {
     <div className="project-description">
       <p>A full-stack application designed to educate students about phishing scams by generating and sending personalized phishing emails. Students receive feedback on their ability to detect phishing attempts, along with insights into the red flags present in each email</p>
     </div>
-    <a href="https://github.com/dylan/project1" target="_blank" rel="noopener noreferrer" className="project-link">
+    <a href="https://github.com/ViaHub92/F24-Orange" target="_blank" rel="noopener noreferrer" className="project-link">
       View on GitHub
     </a>
   </div>

@@ -56,6 +56,25 @@ body {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
+/* Profile Picture Styling */
+.profile-picture-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-right: 150px;
+}
+
+.profile-picture {
+  width: 200px; /* Set the size of the image */
+  height: 200px; /* Ensure the image is square */
+  border-radius: 50%; /* This makes it circular */
+  border: 5px solid #5ccfe6; /* Add a colored border */
+  object-fit: cover; /* Ensures the image covers the area properly */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: add a shadow around the image */
+}
+
 /* Programming Skills Title */
 .skills-title {
   color: #2f3b54;
