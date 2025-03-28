@@ -1,5 +1,5 @@
 # My-Portfolio
-This is my portfolio website
+This is my portfolio website, built with React and deployed on AWS. I’ve also set up GitHub Actions for continuous deployment.
 
 # Getting Started with Create React App
 

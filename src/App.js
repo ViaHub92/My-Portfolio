@@ -55,9 +55,9 @@ const App = () => {
 
   {/* Project 2 */}
   <div className="project-card">
-    <img src="project2.png" alt="Project 2" className="project-image" />
+    <img src="project2.png" alt="Website Portfolio" className="project-image" />
     <div className="project-description">
-      <p>This is a description placeholder for a project.</p>
+      <p>This is my portfolio website, built with React and deployed on AWS. I’ve also set up GitHub Actions for continuous deployment.</p>
     </div>
     <a href="https://github.com/dylan/project2" target="_blank" rel="noopener noreferrer" className="project-link">
       View on GitHub
