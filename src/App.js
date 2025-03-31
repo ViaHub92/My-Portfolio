@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { FaGithub, FaJava, FaPython, FaReact } from 'react-icons/fa';
 import { SiCplusplus, SiMysql } from 'react-icons/si';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 import './App.css';
 
 const Portfolio = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection] = useState('home');
 
   const projects = [
     {
