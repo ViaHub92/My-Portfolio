@@ -53,12 +53,13 @@ body {
 }
 
 .nav-container {
-  max-width: 1200px;
+  position: relative;
+  max-width: 600px;
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: right;
 }
 
 .logo {
@@ -92,8 +93,7 @@ body {
 }
 
 .theme-toggle {
-  position: absolute;
-  right: 2rem;
+  margin-left: auto;
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -332,7 +332,8 @@ body {
   }
 
   .theme-toggle {
-    font-size: 16px; /* Adjust size of theme toggle */
+    right: 1rem;
+    font-size: 1.2rem;  /* Adjust size of theme toggle */
   }
 
   .hero-title {

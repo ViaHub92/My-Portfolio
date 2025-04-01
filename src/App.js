@@ -30,7 +30,6 @@ const Portfolio = () => {
           >
             {isDarkMode ? '🌞' : '🌙'}
             </button>
-          <h1 className="logo">DV</h1>
           <div className="nav-links">
             {['home', 'about', 'skills', 'projects'].map((item) => (
               <button
