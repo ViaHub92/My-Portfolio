@@ -2,28 +2,47 @@ import { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { FaGithub, FaJava, FaPython, FaReact } from 'react-icons/fa';
 import { SiCplusplus, SiMysql } from 'react-icons/si';
-import { animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import './App.css';
 
 const Portfolio = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [activeSection] = useState('home');
-
+  const [activeSection, setActiveSection] = useState('home');
+  
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       setIsDarkMode(true);
       document.body.classList.add('dark-mode');
     }
-  }, []);
+    
 
+    const handleScroll = () => {
+      const sections = ['home', 'skills', 'about', 'projects'];
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
   const toggleTheme = () => {
     const newDarkMode = !isDarkMode;
     setIsDarkMode(newDarkMode);
     document.body.classList.toggle('dark-mode', newDarkMode);
     localStorage.setItem('theme', newDarkMode ? 'dark' : 'light');
   };
-
+  
   const projects = [
     {
       title: 'Phisecure',
@@ -32,15 +51,15 @@ const Portfolio = () => {
       tags: ['Flask','React', 'Node.js', 'MySQL'],
       image: 'https://via92-portfolio.s3.us-east-2.amazonaws.com/Icons/Phisecure.png'
     },
-    // Add more projects as needed
+    // more projects to come
   ];
-
+  
   return (
     <div className="app">
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
-        <label className="switch theme-toggle">
+          <label className="switch theme-toggle">
             <input 
               type="checkbox" 
               checked={isDarkMode}
@@ -57,19 +76,23 @@ const Portfolio = () => {
             </span>
           </label>
           <div className="nav-links">
-            {['home', 'about', 'skills', 'projects'].map((item) => (
-              <button
+            {['home', 'skills', 'about', 'projects'].map((item) => (
+              <Link
                 key={item}
-                onClick={() => scroll.scrollTo(item, { smooth: true })}
+                to={item}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 className={`nav-link ${activeSection === item ? 'active' : ''}`}
               >
-                {item}
-              </button>
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </Link>
             ))}
           </div>
         </div>
       </nav>
-
+      
       {/* Hero Section */}
       <section id="home" className="hero">
         <div className="hero-content">
@@ -79,17 +102,13 @@ const Portfolio = () => {
               sequence={[
                 'Full Stack Engineer',
                 2000,
-                'Problem Solver',
-                2000,
-                'Continuous Learner',
-                2000,
               ]}
               repeat={Infinity}
             />
           </div>
         </div>
       </section>
-
+      
       {/* Skills Section */}
       <section id="skills" className="skills-section">
         <div className="section-container">
@@ -111,7 +130,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
+      
       {/* About Section */}
       <section id="about" className="about-section">
         <div className="section-container">
@@ -122,49 +141,46 @@ const Portfolio = () => {
               alt="Dylan Via"
               className="profile-pic"
             />
-          <p>I’m a recent graduate from Old Dominion University, where I earned my Bachelor’s degree in Computer Science on December 15, 2024. Now, I’m eager to kick-start my career as a Software Engineer, bringing a strong work ethic, adaptability, and problem-solving skills to the tech industry.</p>
-          <p>Before stepping into tech, I built a solid foundation in discipline and teamwork through a variety of jobs. I spent six years as a produce clerk at Kroger, two years as a cook at Serendipity, and a year handling inventory at Radial. Along the way, I also took on side projects in home improvement and landscaping. These jobs helped to get by, but my urge to start a career I will love has taken over.</p>
-          <p>These diverse experiences have shaped me into a well-rounded, hardworking individual who’s ready to take on new challenges in software development. I’m excited to bring my passion for technology and my strong work ethic to a team where I can grow and contribute.</p>
+            <p>I'm a recent graduate from Old Dominion University, where I earned my Bachelor's degree in Computer Science on December 15, 2024. Now, I'm eager to kick-start my career as a Software Engineer, bringing a strong work ethic, adaptability, and problem-solving skills to the tech industry.</p>
+            <p>Before stepping into tech, I built a solid foundation in discipline and teamwork through a variety of jobs. I spent six years as a produce clerk at Kroger, two years as a cook at Serendipity, and a year handling inventory at Radial. Along the way, I also took on side projects in home improvement and landscaping. These jobs helped to get by, but my urge to start a career I will love has taken over.</p>
+            <p>These diverse experiences have shaped me into a well-rounded, hardworking individual who's ready to take on new challenges in software development. I'm excited to bring my passion for technology and my strong work ethic to a team where I can grow and contribute.</p>
           </div>
         </div>
       </section>
-
+      
       {/* Projects Section */}
-<section id="projects" className="projects-section">
-  <div className="section-container">
-    <h2 className="section-title">Projects</h2>
-    <div className="projects-grid">
-      {projects.map((project) => (
-        <div key={project.title} className="project-card">
-          <img src={project.image} alt={`${project.title} screenshot`} className="project-image" />
-          
-          <div className="project-content">
-            <h3 className="project-title">{project.title}</h3>
-            <p className="project-description">{project.description}</p>
-
-            <div className="project-tags">
-              {project.tags.map((tag) => (
-                <span key={tag} className="tag">{tag}</span>
-              ))}
-            </div>
-
-            <a
-              href={project.github}
-              className="github-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="github-icon" />
-              View on GitHub
-            </a>
+      <section id="projects" className="projects-section">
+        <div className="section-container">
+          <h2 className="section-title">Projects</h2>
+          <div className="projects-grid">
+            {projects.map((project) => (
+              <div key={project.title} className="project-card">
+                <img src={project.image} alt={`${project.title} screenshot`} className="project-image" />
+                
+                <div className="project-content">
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
+                  <div className="project-tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                  <a
+                    href={project.github}
+                    className="github-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub className="github-icon" />
+                    View on GitHub
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
+      </section>
+      
       {/* Footer */}
       <footer className="footer">
         <p>© 2024 Dylan Via. All rights reserved.</p>
