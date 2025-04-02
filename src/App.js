@@ -29,7 +29,8 @@ const Portfolio = () => {
       title: 'Phisecure',
       description: 'A full-stack application designed to educate students about phishing scams...',
       github: 'https://github.com/ViaHub92/F24-Orange',
-      tags: ['React', 'Node.js', 'MySQL']
+      tags: ['React', 'Node.js', 'MySQL'],
+      image: '/icons/Phisecure.png'
     },
     // Add more projects as needed
   ];
@@ -129,28 +130,40 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="projects-section">
-        <div className="section-container">
-          <h2 className="section-title">Projects</h2>
-          <div className="projects-grid">
-            {projects.map((project) => (
-              <div key={project.title} className="project-card">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <a
-                  href={project.github}
-                  className="github-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub className="github-icon" />
-                  View on GitHub
-                </a>
-              </div>
-            ))}
+<section id="projects" className="projects-section">
+  <div className="section-container">
+    <h2 className="section-title">Projects</h2>
+    <div className="projects-grid">
+      {projects.map((project) => (
+        <div key={project.title} className="project-card">
+          <img src={project.image} alt={`${project.title} screenshot`} className="project-image" />
+          
+          <div className="project-content">
+            <h3 className="project-title">{project.title}</h3>
+            <p className="project-description">{project.description}</p>
+
+            <div className="project-tags">
+              {project.tags.map((tag) => (
+                <span key={tag} className="tag">{tag}</span>
+              ))}
+            </div>
+
+            <a
+              href={project.github}
+              className="github-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="github-icon" />
+              View on GitHub
+            </a>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="footer">
