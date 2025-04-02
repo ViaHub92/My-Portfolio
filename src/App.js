@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { FaGithub, FaJava, FaPython, FaReact } from 'react-icons/fa';
 import { SiCplusplus, SiMysql } from 'react-icons/si';
@@ -8,6 +8,21 @@ import './App.css';
 const Portfolio = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeSection] = useState('home');
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setIsDarkMode(true);
+      document.body.classList.add('dark-mode');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newDarkMode = !isDarkMode;
+    setIsDarkMode(newDarkMode);
+    document.body.classList.toggle('dark-mode', newDarkMode);
+    localStorage.setItem('theme', newDarkMode ? 'dark' : 'light');
+  };
 
   const projects = [
     {
@@ -24,12 +39,22 @@ const Portfolio = () => {
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
-          <button 
-            className="theme-toggle"
-            onClick={() => setIsDarkMode(!isDarkMode)}
-          >
-            {isDarkMode ? '🌞' : '🌙'}
-            </button>
+        <label className="switch theme-toggle">
+            <input 
+              type="checkbox" 
+              checked={isDarkMode}
+              onChange={toggleTheme}
+            />
+            <span className="slider">
+              <div className="star star_1"></div>
+              <div className="star star_2"></div>
+              <div className="star star_3"></div>
+              <svg viewBox="0 0 16 16" className="cloud_1 cloud">
+                <path transform="matrix(.77976 0 0 .78395-299.99-418.63)" fill="#fff" 
+                      d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"></path>
+              </svg>
+            </span>
+          </label>
           <div className="nav-links">
             {['home', 'about', 'skills', 'projects'].map((item) => (
               <button
@@ -96,7 +121,7 @@ const Portfolio = () => {
               alt="Dylan Via"
               className="profile-pic"
             />
-        <p>I’m a recent graduate from Old Dominion University, where I earned my Bachelor’s degree in Computer Science on December 15, 2024. Now, I’m eager to kick-start my career as a Software Engineer, bringing a strong work ethic, adaptability, and problem-solving skills to the tech industry.</p>
+          <p>I’m a recent graduate from Old Dominion University, where I earned my Bachelor’s degree in Computer Science on December 15, 2024. Now, I’m eager to kick-start my career as a Software Engineer, bringing a strong work ethic, adaptability, and problem-solving skills to the tech industry.</p>
           <p>Before stepping into tech, I built a solid foundation in discipline and teamwork through a variety of jobs. I spent six years as a produce clerk at Kroger, two years as a cook at Serendipity, and a year handling inventory at Radial. Along the way, I also took on side projects in home improvement and landscaping. These jobs helped to get by, but my urge to start a career I will love has taken over.</p>
           <p>These diverse experiences have shaped me into a well-rounded, hardworking individual who’s ready to take on new challenges in software development. I’m excited to bring my passion for technology and my strong work ethic to a team where I can grow and contribute.</p>
           </div>
