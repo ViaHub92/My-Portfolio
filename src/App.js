@@ -141,9 +141,11 @@ const Portfolio = () => {
               alt="Dylan Via"
               className="profile-pic"
             />
-            <p>I'm a recent graduate from Old Dominion University, where I earned my Bachelor's degree in Computer Science on December 15, 2024. Now, I'm eager to kick-start my career as a Software Engineer, bringing a strong work ethic, adaptability, and problem-solving skills to the tech industry.</p>
-            <p>Before stepping into tech, I built a solid foundation in discipline and teamwork through a variety of jobs. I spent six years as a produce clerk at Kroger, two years as a cook at Serendipity, and a year handling inventory at Radial. Along the way, I also took on side projects in home improvement and landscaping. These jobs helped to get by, but my urge to start a career I will love has taken over.</p>
-            <p>These diverse experiences have shaped me into a well-rounded, hardworking individual who's ready to take on new challenges in software development. I'm excited to bring my passion for technology and my strong work ethic to a team where I can grow and contribute.</p>
+            <div className="about-text">
+            <p>I'm a recent graduate of Old Dominion University, where I earned my Bachelor's degree in Computer Science in fall of 2024. Now, I'm eager to kick-start my career as a Software Engineer.</p>
+            <p>I've worked a variety of jobs throughout my life. I have been a grocery clerk, cook, and warehouse employee. I have also dabbled in some side jobs dealing with construction and home repair. While I appreciate these experiences, they have motivated me to pursue a career that I truly love. I am confident that I have found that career in software development</p>
+            <p>Although my experience is limited to solo projects and my education, I have discovered that programming is something I excel at. Before now, I have never had a strong creative outlet, but software development has given me one. I may not be the best yet, but this is just the beginning.</p>
+            </div>
           </div>
         </div>
       </section>
