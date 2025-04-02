@@ -27,7 +27,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: 'Phisecure',
-      description: 'A full-stack application designed to educate students about phishing scams...',
+      description: 'A full-stack application designed to educate students about phishing scams by generating and sending personalized phishing emails. Students receive feedback on their ability to detect phishing attempts, along with insights into the red flags present in each email.',
       github: 'https://github.com/ViaHub92/F24-Orange',
       tags: ['React', 'Node.js', 'MySQL'],
       image: '/icons/Phisecure.png'
