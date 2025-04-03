@@ -51,6 +51,13 @@ const Portfolio = () => {
       tags: ['Flask','React', 'MySQL'],
       image: 'https://via92-portfolio.s3.us-east-2.amazonaws.com/Icons/Phisecure.png'
     },
+    {
+      title: 'Website-Portfolio',
+      description: 'Website created to showcase my projects and ability to create a website. Made with React and continuous deployment using github actions to update the S3 bucket and CloudFront It is hosted with AWS CloudFront.',
+      github: 'https://github.com/ViaHub92/My-Portfolio',
+      tags: ['React', 'AWS'],
+      image: '/Icons/Portfolio.png'
+    },
     // more projects to come
   ];
   
