@@ -62,7 +62,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .nav-link {
@@ -72,8 +72,8 @@ body {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 0.25rem .5rem;
+  border-radius: 2px;
 }
 
 .nav-link:hover,
@@ -112,6 +112,7 @@ body {
   border-radius: 30px;
   overflow: hidden;
   border: 1px solid rgba(var(--text-color-rgb), 0.1);
+  border-color: var(--primary-color);
 }
 
 .slider:before {
@@ -461,7 +462,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem .5rem;
   }
 
   .nav-links {

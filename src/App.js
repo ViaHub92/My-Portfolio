@@ -48,7 +48,7 @@ const Portfolio = () => {
       title: 'Phisecure',
       description: 'A full-stack application designed to educate students about phishing scams by generating and sending personalized phishing emails. Students receive feedback on their ability to detect phishing attempts, along with insights into the red flags present in each email.',
       github: 'https://github.com/ViaHub92/F24-Orange',
-      tags: ['Flask','React', 'Node.js', 'MySQL'],
+      tags: ['Flask','React', 'MySQL'],
       image: 'https://via92-portfolio.s3.us-east-2.amazonaws.com/Icons/Phisecure.png'
     },
     // more projects to come
