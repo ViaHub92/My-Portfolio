@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import { FaGithub, FaJava, FaPython, FaReact } from 'react-icons/fa';
+import { FaGithub, FaJava, FaPython, FaReact, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { SiCplusplus, SiMysql } from 'react-icons/si';
 import { Link } from 'react-scroll';
 import './App.css';
@@ -18,7 +18,7 @@ const Portfolio = () => {
     
 
     const handleScroll = () => {
-      const sections = ['home', 'skills', 'about', 'projects'];
+      const sections = ['home', 'skills', 'about', 'projects', 'contact'];
       
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -76,7 +76,7 @@ const Portfolio = () => {
             </span>
           </label>
           <div className="nav-links">
-            {['home', 'skills', 'about', 'projects'].map((item) => (
+            {['home', 'skills', 'about', 'projects', 'contact'].map((item) => (
               <Link
                 key={item}
                 to={item}
@@ -179,6 +179,30 @@ const Portfolio = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+            {/* Contact Section */}
+      <section id="contact" className="contact-section">
+        <div className="section-container">
+          <h2 className="section-title">Contact Me</h2>
+          <div className="contact-content">
+            <div className="contact-links">
+              <a href="mailto:dvia001@odu.edu" className="contact-link">
+                <FaEnvelope className="contact-icon" />
+                <span>Gmail</span>
+              </a>
+              <a href="https://www.linkedin.com/in/dylan-via-8a7a9b2a7/" target="_blank" rel="noopener noreferrer" className="contact-link">
+                <FaLinkedin className="contact-icon" />
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/ViaHub92" target="_blank" rel="noopener noreferrer" className="contact-link">
+                <FaGithub className="contact-icon" />
+                <span>GitHub</span>
+              </a>
+            </div>
+            <p className="contact-message">I'm currently open to new opportunities! Feel free to reach out through any of the platforms above.</p>
           </div>
         </div>
       </section>

@@ -53,13 +53,11 @@ body {
 }
 
 .nav-container {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 100%;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: right;
+  align-items: center;
 }
 
 .nav-links {
@@ -160,6 +158,7 @@ body {
 .theme-toggle {
   margin-right: 1rem;
   margin-left: auto;
+  display: block !important;
 }
 
 /* Hero Section */
@@ -215,10 +214,10 @@ body {
 .profile-pic {
   width: 200px;
   height: 200px;
-  object-fit: cover; /* This prevents image distortion */
+  object-fit: cover;
   border-radius: 50%;
   margin-bottom: 2rem;
-  border: 4px solid var(--primary-color, #4a89dc); /* Fallback color if variable isn't defined */
+  border: 4px solid var(--primary-color, #4a89dc);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
@@ -238,14 +237,14 @@ body {
 
 .about-text {
   width: 100%;
-  max-width: 800px; /* Limits the width for better readability */
-  margin: 0 auto; /* Centers the text block */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about-text p {
-  text-indent: 2em; /* Creates paragraph indentation */
+  text-indent: 2em;
   margin-bottom: 1em;
-  line-height: 1.6; /* Improves readability with better line spacing */
+  line-height: 1.6;
 }
 
 
@@ -336,9 +335,9 @@ body {
   padding: 2rem;
   border-radius: 0.5rem;
   display: flex;
-  flex-direction: row; /* Changed from column */
+  flex-direction: row;
   gap: 2rem;
-  align-items: flex-start; /* Changed from center */
+  align-items: flex-start;
   border: 2px solid var(--primary-color);
   transition: transform 0.3s ease;
 }
@@ -348,7 +347,7 @@ body {
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
-  flex-shrink: 0; /* Prevents image from shrinking */
+  flex-shrink: 0;
 }
 
 .project-tags {
@@ -401,15 +400,60 @@ body {
   background: var(--primary-color);
 }
 
+.contact-section {
+  padding: 4rem 0;
+  background-color: var(--section-bg);
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color, #333);
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-5px);
+  color: var(--primary-color, #4a89dc);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-message {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
 /* Footer */
 .footer {
   text-align: center;
   padding: 2rem;
-  background: var(--footer-bg);
-  color: var(--footer-text);
+  background: var(--section-bg);
   margin-top: auto;
   position: relative;
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -422,12 +466,13 @@ body {
 
   .nav-links {
     display: flex;
-    gap: 0.5rem; /* Reduce space between links */
-    font-size: 14px; /* Make text slightly smaller */
+    gap: 0.5rem;
+    font-size: 10px;
   }
 
   .nav-link {
-    padding: 0.25rem 0.5rem; /* Smaller padding */
+    padding: 0.25rem 0.5rem;
+    font-size: 12px;
   }
   .switch {
     font-size: 14px;
@@ -436,7 +481,8 @@ body {
 
   .theme-toggle {
     right: 1rem;
-    font-size: 1.2rem;  /* Adjust size of theme toggle */
+    font-size: 1.2rem;
+    display: block !important;
   }
 
   .hero-title {
