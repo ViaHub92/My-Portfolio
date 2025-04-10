@@ -151,7 +151,7 @@ const Portfolio = () => {
             <div className="about-text">
             <p>I'm a recent graduate of Old Dominion University, where I earned my Bachelor's degree in Computer Science in fall of 2024. Now, I'm eager to kick-start my career as a Software Engineer.</p>
             <p>I've worked a variety of jobs throughout my life. I have been a grocery clerk, cook, and warehouse employee. I have also dabbled in some side jobs dealing with construction and home repair. While I appreciate these experiences, they have motivated me to pursue a career that I truly love. I am confident that I have found that career in software development</p>
-            <p>Although my experience is limited to solo projects and my education, I have discovered that programming is something I excel at. Before now, I have never had a strong creative outlet, but software development has given me one. I may not be the best yet, but this is just the beginning.</p>
+            <p>Although my experience is limited to solo projects and my education, I have discovered that programming is something I excel at. Before now, I have never had a strong creative outlet, but software development has given me one and I am forever greatful.</p>
             </div>
           </div>
         </div>
