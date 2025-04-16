@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import { FaGithub, FaJava, FaPython, FaReact, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { SiCplusplus, SiMysql } from 'react-icons/si';
+import { FaGithub, FaJava, FaPython, FaReact, FaLinkedin, FaEnvelope, FaNodeJs, FaAws } from 'react-icons/fa';
+import { SiCplusplus, SiMysql, SiMongodb } from 'react-icons/si';
 import { Link } from 'react-scroll';
 import './App.css';
 
@@ -49,7 +49,7 @@ const Portfolio = () => {
       description: 'A streamlined tax tracking application designed to help users record their income and expenses, with automatic self-employment tax calculations. Built with React and Node.js, it allows users to view tax summaries by month or year, and download detailed PDF reports for easy record-keeping.',
       github: 'https://github.com/ViaHub92/taxxer',
       website: 'https://www.taxxer.link',
-      tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+      tags: ['React', 'Node.js', 'Tailwind CSS', 'MongoDB', 'AWS'],
       image: 'https://via92-portfolio.s3.us-east-2.amazonaws.com/Icons/Taxxer.PNG'
     },
     {
@@ -63,7 +63,7 @@ const Portfolio = () => {
       title: 'Website-Portfolio',
       description: 'Website created to showcase my projects and ability to create a website. Made with React and continuous deployment using github actions to update the S3 bucket and CloudFront It is hosted with AWS CloudFront.',
       github: 'https://github.com/ViaHub92/My-Portfolio',
-      tags: ['React', 'AWS'],
+      tags: ['React', 'CSS', 'AWS'],
       image: 'https://via92-portfolio.s3.us-east-2.amazonaws.com/Icons/Portfolio.PNG'
     },
     // more projects to come
@@ -134,8 +134,10 @@ const Portfolio = () => {
               { icon: <FaJava />, name: 'Java' },
               { icon: <FaPython />, name: 'Python' },
               { icon: <FaReact />, name: 'React' },
+              { icon: <FaNodeJs />, name: 'Node.js' },
               { icon: <SiMysql />, name: 'MySQL' },
-              { icon: <FaGithub />, name: 'GitHub' },
+              { icon: <SiMongodb />, name: 'MongoDB' },
+              { icon: <FaAws />, name: 'AWS' },
             ].map((skill) => (
               <div key={skill.name} className="skill-card">
                 <div className="skill-icon">{skill.icon}</div>
