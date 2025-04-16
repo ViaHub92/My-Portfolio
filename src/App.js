@@ -45,6 +45,14 @@ const Portfolio = () => {
   
   const projects = [
     {
+      title: 'Taxxer',
+      description: 'A streamlined tax tracking application designed to help users record their income and expenses, with automatic self-employment tax calculations. Built with React and Node.js, it allows users to view tax summaries by month or year, and download detailed PDF reports for easy record-keeping.',
+      github: 'https://github.com/ViaHub92/taxxer',
+      website: 'https://www.taxxer.link',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+      image: 'https://via92-portfolio.s3.us-east-2.amazonaws.com/Icons/Taxxer.png'
+    },
+    {
       title: 'Phisecure',
       description: 'A full-stack application designed to educate students about phishing scams by generating and sending personalized phishing emails. Students receive feedback on their ability to detect phishing attempts, along with insights into the red flags present in each email.',
       github: 'https://github.com/ViaHub92/F24-Orange',
@@ -174,15 +182,27 @@ const Portfolio = () => {
                       <span key={tag} className="tag">{tag}</span>
                     ))}
                   </div>
-                  <a
-                    href={project.github}
-                    className="github-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaGithub className="github-icon" />
-                    View on GitHub
-                  </a>
+                  <div className="project-links">
+                    <a
+                      href={project.github}
+                      className="github-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub className="github-icon" />
+                      View on GitHub
+                    </a>
+                    {project.website && (
+                      <a
+                        href={project.website}
+                        className="website-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Visit Website
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

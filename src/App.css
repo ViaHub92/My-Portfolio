@@ -401,6 +401,30 @@ body {
   background: var(--primary-color);
 }
 
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.website-link {
+  display: inline-flex;
+  color: var(--primary-color);
+  text-decoration: none;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.website-link:hover {
+  color: var(--bg-color);
+  background: var(--primary-color);
+}
+
 .contact-section {
   padding: 4rem 0;
   background-color: var(--section-bg);
