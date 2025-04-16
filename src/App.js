@@ -50,7 +50,7 @@ const Portfolio = () => {
       github: 'https://github.com/ViaHub92/taxxer',
       website: 'https://www.taxxer.link',
       tags: ['React', 'Node.js', 'Express', 'MongoDB'],
-      image: 'https://via92-portfolio.s3.us-east-2.amazonaws.com/Icons/Taxxer.png'
+      image: 'https://via92-portfolio.s3.us-east-2.amazonaws.com/Icons/Taxxer.PNG'
     },
     {
       title: 'Phisecure',
