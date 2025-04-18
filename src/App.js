@@ -61,7 +61,7 @@ const Portfolio = () => {
     },
     {
       title: 'Website-Portfolio',
-      description: 'Website created to showcase my projects and ability to create a website. Made with React and continuous deployment using github actions to update the S3 bucket and CloudFront It is hosted with AWS CloudFront.',
+      description: 'I built this website with React to show off some of my projects and what I can do with web development. It’s automatically deployed using GitHub Actions, which updates an S3 bucket and refreshes the CloudFront distribution.',
       github: 'https://github.com/ViaHub92/My-Portfolio',
       tags: ['React', 'CSS', 'AWS'],
       image: 'https://via92-portfolio.s3.us-east-2.amazonaws.com/Icons/Portfolio.PNG'
