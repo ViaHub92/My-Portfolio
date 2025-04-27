@@ -45,6 +45,14 @@ const Portfolio = () => {
   
   const projects = [
     {
+      title: 'HD Notary Website',
+      description: 'A website I made for my friend’s notary business. It has a elegant design matching his logo he created. Just a frontend app using react. It has about us, our mission, and make appointment section. It is hosted through AWS S3 and CloudFront.',
+      github: 'https://github.com/ViaHub92/H-D-Notary',
+      website: 'https://www.hdnotary2025.com',
+      tags: ['React','CSS', 'AWS'],
+      image: ''
+    },
+    {
       title: 'Taxxer',
       description: 'A streamlined tax tracking application designed to help users record their income and expenses, with automatic self-employment tax calculations. Built with React and Node.js, it allows users to view tax summaries by month or year, and download detailed PDF reports for easy record-keeping.',
       github: 'https://github.com/ViaHub92/taxxer',
