@@ -50,7 +50,7 @@ const Portfolio = () => {
       github: 'https://github.com/ViaHub92/H-D-Notary',
       website: 'https://www.hdnotary2025.com',
       tags: ['React','CSS', 'AWS'],
-      image: ''
+      image: 'https://via92-portfolio.s3.us-east-2.amazonaws.com/HDnotary.png'
     },
     {
       title: 'Taxxer',
